@@ -5,6 +5,8 @@ import Errors.lowDBExceptions as exceptions
 
 logger = Logger()
 
+PATH = ''
+
 def makeFile(path: str) -> dict:
     '''
         Function to create the lowDB json file
@@ -59,3 +61,7 @@ def loadFile(path: str) -> dict:
     logger.success('Loaded')
     logger.info("Database metaData:", data=data['metaData'])
     return data
+
+def updateFile(path: str, data: dict):
+    with open(path, 'w') as db:
+        db.write(dumps(data, indent=4))

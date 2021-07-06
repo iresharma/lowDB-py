@@ -23,6 +23,7 @@ class Logger:
                 print(dumps(data, indent=4))
             else:
                 pprint(data)
+        sys.stdout.write(self.NC)
 
     def error(self, message: str, data=None):
         sys.stdout.write(self.RED)
@@ -37,6 +38,7 @@ class Logger:
         sys.stdout.write(self.END_BOLD)
         sys.stdout.write(self.RED)
         print('===============LowDB ERROR===============')
+        sys.stdout.write(self.NC)
 
     def warning(self, message: str, data=None):
         sys.stdout.write(self.YELLOW)
@@ -46,6 +48,7 @@ class Logger:
                 print(dumps(data, indent=4))
             else:
                 pprint(data)
+        sys.stdout.write(self.NC)
     
     def info(self, message: str, data=None):
         sys.stdout.write(self.BLUE)
@@ -55,6 +58,7 @@ class Logger:
                 print(dumps(data, indent=4))
             else:
                 pprint(data)
+        sys.stdout.write(self.NC)
 
     def success(self, message: str, data=None):
         sys.stdout.write(self.GREEN)
@@ -66,3 +70,4 @@ class Logger:
             else:
                 pprint(data)
         sys.stdout.write(self.END_BOLD)
+        sys.stdout.write(self.NC)
