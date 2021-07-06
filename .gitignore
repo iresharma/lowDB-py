@@ -1,0 +1,7 @@
+dist/
+build/
+.vscode/
+
+LowDB/src/__pycache__/
+LowDB/src/*/__pycache__/
+LowDB/src/LowDB.egg-info/
