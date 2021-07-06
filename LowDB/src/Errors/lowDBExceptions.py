@@ -13,3 +13,9 @@ class DecodeError(LowDBError):
 
     def __str__(self):
         print("Error occurred while decoding json from db.json")
+
+class InvalidSearchArgsError(LowDBError):
+    """Error when invalid parameters were send to the search function"""
+
+    def __str__(self):
+        print("Error occured in searching; invalid props were sent")
